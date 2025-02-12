@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PDF to Excel Converter</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                background-color: #e8f5e9; /* Light green background */
+                color: #2e7d32; /* Dark green text */
+                margin: 0;
+                padding: 0;
+            }
+            h1 {
+                margin-top: 20px;
+            }
+            .upload-container {
+                width: 50%;
+                margin: 20px auto;
+                padding: 20px;
+                border: 2px dashed #2e7d32; /* Green dashed border */
+                border-radius: 10px;
+                background-color: #ffffff; /* White background */
+                cursor: pointer;
+                transition: background 0.3s;
+                position: relative;
+            }
+            .upload-container.dragover {
+                background-color: #c8e6c9; /* Light green when dragging */
+            }
+            input[type="file"] {
+                display: none;
+            }
+            .upload-text {
+                font-size: 18px;
+                font-weight: bold;
+                margin-bottom: 10px;
+                color: #2e7d32;
+            }
+            .file-name {
+                font-size: 16px;
+                font-weight: bold;
+                color: #388e3c;
+                margin-top: 10px;
+            }
+            button {
+                margin-top: 10px;
+                padding: 10px 20px;
+                background-color: #2e7d32; /* Green button */
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+            button:hover {
+                background-color: #1b5e20;
+            }
+            a.btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #2e7d32; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+a.btn:hover {
+    background-color: #1b5e20;
+}
+        </style>
+    </head>
+    <body>
+    <div class="upload-container">
+        <h1>Upload PDF to Convert to Excel</h1>
+        <a href="{{ url_for('upload_pdf.index') }}" class="btn btn-primary">Credit Card</a><br><br><br>
+        <a href="{{ url_for('upload.upload_file') }}" class="btn btn-primary">Bank Statement</a>
+    </div>
+</body>
+</html>
