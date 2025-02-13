@@ -18,5 +18,10 @@ ENV FLASK_APP=app.py
 ENV FLASK_RUN_HOST=0.0.0.0
 ENV FLASK_ENV=production
 
+#Permission for uploads folder
+RUN mkdir -p /app/uploads && chmod -R 777 /app/uploads
+
 # Command to run the application
 CMD ["flask", "run", "--host=0.0.0.0", "--port=8080"]
+
+

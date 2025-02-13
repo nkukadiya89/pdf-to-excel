@@ -7,7 +7,7 @@ from flask import Blueprint, jsonify, render_template, request, send_file
 
 upload_blueprint = Blueprint("upload", __name__)
 
-UPLOAD_FOLDER = "uploads"
+UPLOAD_FOLDER = "uploads/"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 
@@ -41,7 +41,7 @@ def upload_file():
 
     return render_template("upload.html")
 
-@upload_blueprint.route("/download/uploads/<filename>")
+@upload_blueprint.route("/download/<filename>")
 def download_file(filename):
     file_path = os.path.join(UPLOAD_FOLDER, filename)
     
